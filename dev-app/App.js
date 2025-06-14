@@ -6,7 +6,7 @@ import axios from 'axios';
 
 
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
-const API_KEY = 'dfd3af8a5abb7405b4d2003a16b2b7da';
+const API_KEY = 'key_da_api_';
 
 
 
@@ -23,7 +23,7 @@ export default function App() {
 
   async function getLocation() {
 
-    let { status } = await Location.requestForegroundPermissionsAsync(); //vai fazer um pedido ao usuario se ele permite
+    let { status } = await Location.requestForegroundPermissionsAsync(); //vai fazer um pedido ao usuario se ele permite a localização
     if (status !== 'granted') { //verifica se permitiu a localização
       setErrorMsg('Permission to access location was denied');
       return;
